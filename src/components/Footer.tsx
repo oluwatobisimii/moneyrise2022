@@ -3,7 +3,6 @@ import { RiInstagramLine, RiTwitterLine } from "react-icons/ri";
 import { HiArrowRight } from "react-icons/hi";
 
 import logowhite from "../assets/logowhite.svg";
-import logo from "../assets/logo.svg";
 import rise from "../assets/rise.svg";
 import playstore from "../assets/playstore.svg";
 import appstore from "../assets/appstore.svg";
