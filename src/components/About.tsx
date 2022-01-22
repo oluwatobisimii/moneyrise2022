@@ -1,31 +1,135 @@
-import React from "react";
-import orangecoin from "../assets/orangecoins.svg";
+import React, {useEffect, useRef} from "react";
 import logo from "../assets/logo.svg";
 import logowhite from "../assets/logowhite.svg";
 import { HiArrowRight } from "react-icons/hi";
 
 
+
+import { create } from "@lottiefiles/lottie-interactivity";
+
+import "@lottiefiles/lottie-player";
+
+
 function About() {
+
+  const container4Ref: any = useRef<HTMLDivElement>(null);
+  const container5Ref: any = useRef<HTMLDivElement>(null);
+  const container6Ref: any = useRef<HTMLDivElement>(null);
+  const container7Ref: any = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    container4Ref.current.addEventListener(
+      "load",
+      (e: React.ChangeEvent<HTMLInputElement>) => {
+
+
+        // 4. configure the interactivity library
+        create({
+          mode: "scroll",
+          container: '#aboutContainer',
+          player: "#thirdLottie",
+          actions: [
+            {
+              visibility: [0.1, 0.7],
+              type: "seek",
+              frames: [0, 30],
+            },
+          ],
+        });
+      }
+    );
+    container5Ref.current.addEventListener(
+      "load",
+      (e: React.ChangeEvent<HTMLInputElement>) => {
+        // 4. configure the interactivity library
+        create({
+          mode: "scroll",
+          container: '#aboutContainer',
+          player: "#fourthLottie",
+          actions: [
+            {
+              visibility: [0.1, 0.7],
+              type: "seek",
+              frames: [0, 30],
+            },
+          ],
+        });
+      }
+    );
+    container6Ref.current.addEventListener(
+      "load",
+      (e: React.ChangeEvent<HTMLInputElement>) => {
+        // 4. configure the interactivity library
+        create({
+          mode: "scroll",
+          container: '#aboutContainer',
+          player: "#lottie5",
+          actions: [
+            {
+              visibility: [0.7, 1],
+              type: "seek",
+              frames: [0, 30],
+            },
+          ],
+        });
+      }
+    );
+    container7Ref.current.addEventListener(
+      "load",
+      (e: React.ChangeEvent<HTMLInputElement>) => {
+        // 4. configure the interactivity library
+        create({
+          mode: "scroll",
+          container: '#aboutContainer',
+          player: "#lottie6",
+          actions: [
+            {
+              visibility: [0.7, 1],
+              type: "seek",
+              frames: [0, 30],
+            },
+          ],
+        });
+      }
+    );
+
+    return () => {};
+  }, []);
+
   return (
     <div
-      className="bg-aboutgrey font-dm-sans p-5 dark:bg-darker
-       
-      "
+      className="bg-aboutgrey font-dm-sans p-5 dark:bg-darker"
     >
-      <section className="container mx-auto lg:grid lg:grid-cols-6 lg:py-16">
+      <section className="container mx-auto lg:grid lg:grid-cols-6 lg:py-16" id='aboutContainer'>
         <div className="lg:col-span-2">
           <p
             className="text-center font-tomato font-semibold text-4xl
     lg:text-6xl
     my-8 mt-8
         dark:text-darktextHD
-        lg:text-left
+        lg:text-left lg:mt-0
     "
           >
             About the Conference
           </p>
-          <div className="hidden lg:block">
-            <img src={orangecoin} alt="" />
+          <div className="hidden lg:inline">
+            <div className="dark:hidden">
+            <lottie-player
+              ref={container4Ref}
+              id="thirdLottie"
+              mode="normal"
+              src="https://assets8.lottiefiles.com/packages/lf20_bvya7txw.json"
+            ></lottie-player>
+          </div>
+
+          <div className="hidden dark:inline">
+            <lottie-player
+              ref={container5Ref}
+              id="fourthLottie"
+              mode="normal"
+              src="https://assets10.lottiefiles.com/packages/lf20_x25rkvha.json"
+            ></lottie-player>
+            </div>
           </div>
         </div>
         <div className="col-span-4">
@@ -106,7 +210,24 @@ function About() {
           </div>
         </div>
         <div className=" lg:hidden w-3/4 mx-auto -mb-5">
-          <img src={orangecoin} alt="" />
+          
+          <div className="dark:hidden">
+            <lottie-player
+              ref={container6Ref}
+              id="lottie5"
+              mode="normal"
+              src="https://assets8.lottiefiles.com/packages/lf20_bvya7txw.json"
+            ></lottie-player>
+          </div>
+
+          <div className="hidden dark:block">
+            <lottie-player
+              ref={container7Ref}
+              id="lottie6"
+              mode="normal"
+              src="https://assets10.lottiefiles.com/packages/lf20_x25rkvha.json"
+            ></lottie-player>
+            </div>
         </div>
       </section>
     </div>

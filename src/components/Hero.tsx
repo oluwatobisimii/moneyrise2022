@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import greencoinshero from "../assets/greencoinshero.svg";
 
 import celeb from "../assets/celeb.svg";
 import {
@@ -14,11 +15,16 @@ import "@lottiefiles/lottie-player";
 function Hero() {
   const containerRef: any = useRef<HTMLDivElement>(null);
   const container2Ref: any = useRef<HTMLDivElement>(null);
+  const container3Ref: any = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     containerRef.current.addEventListener(
       "load",
       (e: React.ChangeEvent<HTMLInputElement>) => {
+
+        // Hide Initial Image Display
+        container3Ref.current.style.display = "none";
+
         // 4. configure the interactivity library
         create({
           mode: "scroll",
@@ -57,7 +63,7 @@ function Hero() {
   return (
     <div className="dark:bg-black">
       <section
-        className="container mx-auto px-5 lg:flex
+        className="container mx-auto px-5 pt-9 lg:flex
     
     "
       >
@@ -66,7 +72,7 @@ function Hero() {
       lg:w-1/2 lg:self-center"
         >
           <div
-            className="text-center space-y-4 
+            className="text-center space-y-6 
           lg:text-left lg:space-y-7
         "
           >
@@ -92,13 +98,19 @@ function Hero() {
             <p className="font-medium text-18 dark:text-darktextHD">
               Where money meets direction.
             </p>
-            <div className="bg-grey flex space-x-3 justify-center text-lg items-center shadow-inset p-4 rounded-lg w-fit">
-              <HiCalendar className="text-primary2" />
-              <p>Jan 29</p>
-              <HiClock className="text-primary2" />
-              <p>10:00am</p>
-              <HiLocationMarker className="text-primary2" />
-              <p>Civic Center, Lagos</p>
+            <div className="bg-grey flex space-x-2 text-base items-center shadow-inset p-4 rounded-lg w-fit dark:bg-bodycopy dark:text-white">
+              <div className="flex items-center space-x-1">
+                <HiCalendar className="text-primary2" />
+                <p>Jan 29</p>
+              </div>
+              <div className="flex items-center space-x-1">
+                <HiClock className="text-primary2" />
+                <p>10:00am</p>
+              </div>
+              <div className="flex items-center space-x-1">
+                <HiLocationMarker className="text-primary2" />
+                <p>Civic Center, Lagos</p>
+              </div>
             </div>
             <a
               href="https://tix.africa/rise22"
@@ -112,6 +124,7 @@ function Hero() {
           </div>
         </div>
         <div className="lg:w-1/2">
+          <img src={greencoinshero} alt="" ref={container3Ref}/>
           <div className="dark:hidden">
             <lottie-player
               ref={containerRef}

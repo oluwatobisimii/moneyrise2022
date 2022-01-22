@@ -25,7 +25,7 @@ function SpeakerCard() {
 
 function Speaker() {
   return (
-    <div className="bg-speaker dark:bg-featdark">
+    <div className="bg-speaker dark:bg-featdark lg:py-20">
       <section className="container mx-auto p-4 lg:py-16 grid-cols-6 lg:grid">
         <div className="lg:col-span-2">
           <p

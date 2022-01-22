@@ -21,27 +21,27 @@ function Countdown(props: countdownDate) {
   return (
     <div
       className="order-3 col-span-3 text-primary2
-    md:col-span-1 md:order-none
+    md:col-span-1 md:order-none self-end pt-7 lg:pt-0 lg:self-center
     "
     >
       <p>
-        Commences on
+        <span className="text-black dark:text-primary2">Commences on</span> 
         {/* <br className=" sm:hidden"/> */}
-        <span className="inline-block p-2 mx-2 bg-white text-riseblack font-medium rounded-lg shadow-inner">
+        <span className="inline-block p-2 mx-2 bg-white dark:bg-bodycopy dark:text-white text-black font-medium rounded-lg shadow-inner">
           0{props.day}
         </span>
         <span>d</span>
-        <span className="inline-block p-2 mx-2 bg-white text-riseblack font-medium rounded-lg shadow-inner">
+        <span className="inline-block p-2 mx-2 bg-white text-black font-medium rounded-lg shadow-inner dark:bg-bodycopy dark:text-white">
           {props.hour < 10 ? "0" : ""}
           {props.hour}
         </span>
         <span>h</span>
-        <span className="inline-block p-2 mx-2 bg-white text-riseblack font-medium rounded-lg shadow-inner">
+        <span className="inline-block p-2 mx-2 bg-white text-black font-medium rounded-lg shadow-inner dark:bg-bodycopy dark:text-white">
           {props.minutes < 10 ? "0" : ""}
           {props.minutes}
         </span>
         <span>m</span>
-        <span className="inline-block p-2 mx-2 bg-white text-riseblack font-medium rounded-lg shadow-inner">
+        <span className="inline-block p-2 mx-2 bg-white text-black font-medium rounded-lg shadow-inner dark:bg-bodycopy dark:text-white">
           {props.seconds < 10 ? "0" : ""}
           {props.seconds}
         </span>
