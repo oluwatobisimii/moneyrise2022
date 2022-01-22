@@ -1,0 +1,162 @@
+@font-face {
+    font-family: 'Tomato Grotesk';
+    src: url('TomatoGrotesk-Black.woff2') format('woff2'),
+        url('TomatoGrotesk-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tomato Grotesk';
+    src: url('TomatoGrotesk-BoldSlanted.woff2') format('woff2'),
+        url('TomatoGrotesk-BoldSlanted.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tomato Grotesk';
+    src: url('TomatoGrotesk-BlackSlanted.woff2') format('woff2'),
+        url('TomatoGrotesk-BlackSlanted.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tomato Grotesk';
+    src: url('TomatoGrotesk-Bold.woff2') format('woff2'),
+        url('TomatoGrotesk-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tomato Grotesk';
+    src: url('TomatoGrotesk-ExtraBold.woff2') format('woff2'),
+        url('TomatoGrotesk-ExtraBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tomato Grotesk';
+    src: url('TomatoGrotesk-ExtraLight.woff2') format('woff2'),
+        url('TomatoGrotesk-ExtraLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tomato Grotesk';
+    src: url('TomatoGrotesk-ExtraBoldSlanted.woff2') format('woff2'),
+        url('TomatoGrotesk-ExtraBoldSlanted.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tomato Grotesk';
+    src: url('TomatoGrotesk-Medium.woff2') format('woff2'),
+        url('TomatoGrotesk-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tomato Grotesk';
+    src: url('TomatoGrotesk-Light.woff2') format('woff2'),
+        url('TomatoGrotesk-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tomato Grotesk';
+    src: url('TomatoGrotesk-LightSlanted.woff2') format('woff2'),
+        url('TomatoGrotesk-LightSlanted.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tomato Grotesk';
+    src: url('TomatoGrotesk-ExtraLightSlanted.woff2') format('woff2'),
+        url('TomatoGrotesk-ExtraLightSlanted.woff') format('woff');
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tomato Grotesk';
+    src: url('TomatoGrotesk-Regular.woff2') format('woff2'),
+        url('TomatoGrotesk-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tomato Grotesk';
+    src: url('TomatoGrotesk-SemiBoldSlanted.woff2') format('woff2'),
+        url('TomatoGrotesk-SemiBoldSlanted.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tomato Grotesk';
+    src: url('TomatoGrotesk-MediumSlanted.woff2') format('woff2'),
+        url('TomatoGrotesk-MediumSlanted.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tomato Grotesk';
+    src: url('TomatoGrotesk-SemiBold.woff2') format('woff2'),
+        url('TomatoGrotesk-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tomato Grotesk';
+    src: url('TomatoGrotesk-Slanted.woff2') format('woff2'),
+        url('TomatoGrotesk-Slanted.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tomato Grotesk';
+    src: url('TomatoGrotesk-Thin.woff2') format('woff2'),
+        url('TomatoGrotesk-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tomato Grotesk';
+    src: url('TomatoGrotesk-ThinSlanted.woff2') format('woff2'),
+        url('TomatoGrotesk-ThinSlanted.woff') format('woff');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
