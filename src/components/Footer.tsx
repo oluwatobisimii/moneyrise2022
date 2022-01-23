@@ -10,9 +10,10 @@ import appstore from "../assets/appstore.svg";
 function Footer() {
   return (
     <div className="bg-black lg:py-14 p-4 py-7">
-      <footer className="container mx-auto flex flex-col-reverse lg:flex-row lg:justify-between lg:items-center">
-        <div className="mt-9 space-y-6 lg:mt-0 lg:space-y-12">
-          <div className="flex space-x-7 lg:flex-col lg:space-x-0 lg:space-y-6">
+      <footer className="container mx-auto flex flex-col-reverse md:flex-row md:justify-between md:items-center md:my-9">
+        <div className="mt-9 space-y-6 lg:mt-0 lg:space-y-12 md:mt-0">
+          <div className="flex space-x-7
+          md:items-center lg:items-start lg:flex-col lg:space-x-0 lg:space-y-6">
             <div className="flex space-x-4">
               <RiInstagramLine className="box-content rounded-full bg-profile p-3 text-xl text-white" />
               <RiTwitterLine className="box-content rounded-full bg-profile p-3 text-xl text-white" />
@@ -39,7 +40,7 @@ function Footer() {
             </a>
           </div>
           <p className="text-allright font-bold">
-            All right <span>&#169;</span> reserved 2022
+            All right reserved 2022 <span>&#169;</span>
           </p>
         </div>
 

@@ -7,7 +7,7 @@ import civicDark from "../assets/civicDark.svg";
 function Venue() {
   return (
     <div className=" bg-white dark:bg-dark4 relative overflow-y-hidden lg:py-32">
-      <section className="mx-auto container px-4 py-7">
+      <section className="mx-auto container px-4 py-7 md:py-12">
         <div className="font-dm-sans item-stretch space-y-4 lg:space-y-6 w-2/3 lg:w-1/5">
           <HiLocationMarker className="text-6xl text-primary2" />
           <p className="font-bold text-lg lg:text-2xl dark:text-darktextHD">The Civic centre</p>
@@ -18,7 +18,7 @@ function Venue() {
             href="https://www.google.com/maps/place/The+Civic+Centre/@6.4366069,3.4150108,19z/data=!4m5!3m4!1s0x103b8bf8651d78d1:0x33cf456abeeb2398!8m2!3d6.436355!4d3.415499"
             target="_blank"
             rel="noreferrer"
-            className="text-base dark:text-darktextHD inline-block"
+            className="text-base dark:text-darktextHD inline-block pb-1 border-b-2"
           >
             view on map
           </a>

@@ -44,7 +44,6 @@ function About() {
         // 4. configure the interactivity library
         create({
           mode: "scroll",
-          container: '#aboutContainer',
           player: "#fourthLottie",
           actions: [
             {
@@ -62,7 +61,6 @@ function About() {
         // 4. configure the interactivity library
         create({
           mode: "scroll",
-          container: '#aboutContainer',
           player: "#lottie5",
           actions: [
             {
@@ -149,12 +147,12 @@ function About() {
 
           <div
             className=" space-y-7 mt-7
-          lg:flex lg:flex-wrap lg:space-y-0 lg:gap-5
+          md:flex md:flex-wrap md:space-y-0 md:gap-5
           "
           >
             <div
               className="rounded-md p-6 space-y-4 border-2
-        dark:border-darkstroke dark:text-darktext lg:w-2/5 lg:items-stretch">
+        dark:border-darkstroke dark:text-darktext md:w-2/5 md:items-stretch">
               <p className="font-bold text-lg">Answer to your questions</p>
               <p className="text-base">
                 If you have questions about investing well, avoiding scams,
@@ -165,7 +163,7 @@ function About() {
             <div
               className="rounded-md p-6 space-y-4 border-2
         dark:border-darkstroke
-        dark:text-darktext lg:w-2/5 lg:items-stretch"
+        dark:text-darktext md:w-2/5 md:items-stretch"
             >
               <p className="font-bold text-lg">
                 Invest safely and successfully
@@ -179,7 +177,7 @@ function About() {
             <div
               className="rounded-md p-6 space-y-4 border-2
         dark:border-darkstroke
-        dark:text-darktext lg:w-2/5 lg:items-stretch"
+        dark:text-darktext md:w-2/5 md:items-stretch"
             >
               <p className="font-bold text-lg">Powered by Risevest</p>
               <p className="text-base">
@@ -191,7 +189,7 @@ function About() {
             <div
               className="rounded-md p-6 space-y-4 border-2
         dark:border-darkstroke
-        dark:text-darktext lg:w-2/5 lg:items-stretch"
+        dark:text-darktext md:w-2/5 md:items-stretch"
             >
               <div>
                 <img src={logo} alt="" className=" dark:hidden " />
