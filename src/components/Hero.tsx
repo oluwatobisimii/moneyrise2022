@@ -125,7 +125,7 @@ function Hero() {
           </div>
         </div>
         <div className="lg:w-1/2">
-          <img src={greencoinshero} alt="" ref={container3Ref} className="dark:hidden hidden lg:inline"/>
+          <img src={greencoinshero} alt="" ref={container3Ref} className="dark:hidden hidden"/>
           <div className="dark:hidden">
             <lottie-player
               ref={containerRef}
