@@ -6,7 +6,6 @@ import { HiArrowRight } from "react-icons/hi";
 
 
 import { create } from "@lottiefiles/lottie-interactivity";
-
 import "@lottiefiles/lottie-player";
 
 
@@ -204,7 +203,6 @@ function About() {
           </div>
         </div>
         <div className=" lg:hidden w-3/4 mx-auto -mb-5 border-0">
-          
           <div className="dark:hidden">
             <lottie-player
               ref={container6Ref}

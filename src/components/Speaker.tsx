@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import eke from "../assets/speakers/EKE.png";
 import ka from "../assets/speakers/KA image.png";
 import so from "../assets/speakers/SO.png";
@@ -6,6 +6,9 @@ import da from "../assets/speakers/DA.png";
 import co from "../assets/speakers/CO.png";
 import greencoins from "../assets/greencoins.svg";
 import { HiChevronRight, HiChevronLeft, HiX } from "react-icons/hi";
+
+import { create } from "@lottiefiles/lottie-interactivity";
+import "@lottiefiles/lottie-player";
 
 type SpeakersProps = {
   firstname: string;
@@ -20,9 +23,8 @@ type SpeakersProps = {
 };
 
 type bodyScrollProps = {
-  bodyScroll: ()=>void
-}
-
+  bodyScroll: () => void;
+};
 
 const Speakers = [
   {
@@ -67,42 +69,42 @@ function SpeakerOverlay(props: SpeakersProps) {
   return (
     <div className="fixed top-0 bottom-0 left-0 right-0 h-screen w-screen bg-slate-900 bg-opacity-80  font-dm-sans z-10">
       <div className="mx-auto container top-0 bottom-0 left-0 flex justify-center lg:justify-between items-center px-12 h-full">
-      <HiChevronLeft
-        className="hover:cursor box-content rounded-full bg-darktextHD dark:bg-profile p-3 text-xl dark:text-white hidden lg:inline-block"
-        onClick={props.prevHandler}
-      />
-      <div className="relative flex flex-col h-5/6 lg:flex-row w-full lg:h-5/6 lg:w-5/6">
-        <div className=" lg:w-2/5 w-full h-2/5 overflow-y-hidden lg:h-full rounded-t-lg lg:rounded-l-lg lg:rounded-tr-none bg-primary2">
-          <img
-            src={props.image}
-            alt=""
-            className="object-cover object-center lg:object-top bg-primary2 lg:h-full md:w-2/3 lg:pt-5 lg:w-full mx-auto"
+        <HiChevronLeft
+          className="hover:cursor box-content rounded-full bg-darktextHD dark:bg-profile p-3 text-xl dark:text-white hidden lg:inline-block"
+          onClick={props.prevHandler}
+        />
+        <div className="relative flex flex-col h-5/6 lg:flex-row w-full lg:h-5/6 lg:w-5/6">
+          <div className=" lg:w-2/5 w-full h-2/5 overflow-y-hidden lg:h-full rounded-t-lg lg:rounded-l-lg lg:rounded-tr-none bg-primary2">
+            <img
+              src={props.image}
+              alt=""
+              className="object-cover object-center lg:object-top bg-primary2 lg:h-full md:w-2/3 lg:pt-5 lg:w-full mx-auto"
+            />
+          </div>
+          <div className="bg-white dark:bg-black p-14 dark:text-darktext h-3/5 space-y-8 lg:w-3/5 lg:h-full overflow-y-auto rounded-b-lg lg:rounded-r-lg lg:rounded-bl-none">
+            <div>
+              <p className="font-bold font-dm-sans text-xl lg:text-3xl dark:text-darktext justify-self-center">
+                {props.firstname}{" "}
+                <span className="italic font-normal">{props.lastname}</span>
+              </p>
+              <p className="dark:text-speakercardtext">Speaker</p>
+            </div>
+
+            <div>
+              <p className="dark:text-darktext whitespace-pre-line lg:text-18 leading-relaxed">
+                {props.description}
+              </p>
+            </div>
+          </div>
+          <HiX
+            className="hover:cursor box-content rounded-full bg-darktextHD dark:bg-profile p-3 text-xl dark:text-white absolute -right-3 -top-3"
+            onClick={props.closeHandler}
           />
         </div>
-        <div className="bg-white dark:bg-black p-14 dark:text-darktext h-3/5 space-y-8 lg:w-3/5 lg:h-full overflow-y-auto rounded-b-lg lg:rounded-r-lg lg:rounded-bl-none">
-          <div>
-            <p className="font-bold font-dm-sans text-xl lg:text-3xl dark:text-darktext justify-self-center">
-              {props.firstname}{" "}
-              <span className="italic font-normal">{props.lastname}</span>
-            </p>
-            <p className="dark:text-speakercardtext">Speaker</p>
-          </div>
-
-          <div>
-            <p className="dark:text-darktext whitespace-pre-line lg:text-18 leading-relaxed">
-              {props.description}
-            </p>
-          </div>
-        </div>
-        <HiX
-          className="hover:cursor box-content rounded-full bg-darktextHD dark:bg-profile p-3 text-xl dark:text-white absolute -right-3 -top-3"
-          onClick={props.closeHandler}
+        <HiChevronRight
+          className="hover:cursor box-content rounded-full bg-darktextHD dark:bg-profile p-3 text-xl dark:text-white hidden lg:inline-block"
+          onClick={props.nextHandler}
         />
-      </div>
-      <HiChevronRight
-        className="hover:cursor box-content rounded-full bg-darktextHD dark:bg-profile p-3 text-xl dark:text-white hidden lg:inline-block"
-        onClick={props.nextHandler}
-      />
       </div>
     </div>
   );
@@ -136,11 +138,91 @@ function SpeakerCard(props: SpeakersProps) {
 }
 
 function Speaker(props: bodyScrollProps) {
+  const container8Ref: any = useRef<HTMLDivElement>(null);
+  const container9Ref: any = useRef<HTMLDivElement>(null);
+  const container10Ref: any = useRef<HTMLDivElement>(null);
+  const container11Ref: any = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    container8Ref.current.addEventListener(
+      "load",
+      (e: React.ChangeEvent<HTMLInputElement>) => {
+        // 4. configure the interactivity library
+        create({
+          mode: "scroll",
+          player: "#lottie7",
+          actions: [
+            {
+              visibility: [0, 0.5],
+              type: "seek",
+              frames: [0, 30],
+            },
+          ],
+        });
+      }
+    );
+
+    container9Ref.current.addEventListener(
+      "load",
+      (e: React.ChangeEvent<HTMLInputElement>) => {
+        // 4. configure the interactivity library
+        create({
+          mode: "scroll",
+          player: "#lottie8",
+          actions: [
+            {
+              visibility: [0, 0.5],
+              type: "seek",
+              frames: [0, 30],
+            },
+          ],
+        });
+      }
+    );
+
+    container10Ref.current.addEventListener(
+      "load",
+      (e: React.ChangeEvent<HTMLInputElement>) => {
+        // 4. configure the interactivity library
+        create({
+          mode: "scroll",
+          player: "#lottie9",
+          actions: [
+            {
+              visibility: [0, 0.3],
+              type: "seek",
+              frames: [0, 30],
+            },
+          ],
+        });
+      }
+    );
+
+    container11Ref.current.addEventListener(
+      "load",
+      (e: React.ChangeEvent<HTMLInputElement>) => {
+        // 4. configure the interactivity library
+        create({
+          mode: "scroll",
+          player: "#lottie10",
+          actions: [
+            {
+              visibility: [0.1, 0.3],
+              type: "seek",
+              frames: [0, 30],
+            },
+          ],
+        });
+      }
+    );
+
+    return () => {};
+  }, []);
+
   const [showSpeakerDetails, setShowSpeakerDetails] = useState(false);
   const [cardIndex, setCardIndex] = useState(0);
 
-  const overlayClassName = showSpeakerDetails ? "block" : "hidden"
-  
+  const overlayClassName = showSpeakerDetails ? "block" : "hidden";
 
   const cardClickHandler = (e: React.MouseEvent<SVGElement>) => {
     const cardIndex = (e.target as Element).parentElement?.parentElement
@@ -148,25 +230,28 @@ function Speaker(props: bodyScrollProps) {
     const selectedIndex: number = Number(cardIndex);
     setShowSpeakerDetails(true);
     setCardIndex(selectedIndex);
-    props.bodyScroll()
+    props.bodyScroll();
   };
 
   const cardCloseHandler = (e: React.MouseEvent<SVGElement>) => {
     setShowSpeakerDetails(false);
-    props.bodyScroll()
+    props.bodyScroll();
   };
+
   const cardNextHandler = (e: React.MouseEvent<SVGElement>) => {
-    if (Speakers.length - 1 === cardIndex){
-      setCardIndex(0)
-    }else{
-      setCardIndex(cardIndex + 1)
+    if (Speakers.length - 1 === cardIndex) {
+      setCardIndex(0);
+    } else {
+      setCardIndex(cardIndex + 1);
     }
-    
   };
+
   const cardPrevHandler = (e: React.MouseEvent<SVGElement>) => {
-    if (cardIndex === 0){
-      setCardIndex(Speakers.length - 1)
-    }else{setCardIndex(cardIndex - 1)}
+    if (cardIndex === 0) {
+      setCardIndex(Speakers.length - 1);
+    } else {
+      setCardIndex(cardIndex - 1);
+    }
   };
 
   return (
@@ -176,7 +261,26 @@ function Speaker(props: bodyScrollProps) {
           <p className="text-center font-tomato font-semibold text-4xl lg:text-6xl my-8 mt-8 dark:text-darktextHD lg:text-left col-span-2 lg:w-3/4">
             Featured Speakers
           </p>
-          <img src={greencoins} alt="" className="hidden lg:inline" />
+          <img src={greencoins} alt="" className="hidden" />
+          <div className="hidden lg:inline">
+            <div className="dark:hidden">
+              <lottie-player
+                ref={container8Ref}
+                id="lottie7"
+                mode="normal"
+                src="https://assets1.lottiefiles.com/packages/lf20_shgbbqut.json"
+              ></lottie-player>
+            </div>
+
+            <div className="hidden dark:block">
+              <lottie-player
+                ref={container9Ref}
+                id="lottie8"
+                mode="normal"
+                src="https://assets5.lottiefiles.com/packages/lf20_3jipweke.json"
+              ></lottie-player>
+            </div>
+          </div>
         </div>
         <div className="col-span-4 md:flex md:space-x-5 lg:space-y-0 space-y-7 lg:space-x-0 lg:gap-x-4 md:space-y-0 md:flex-wrap md:justify-center md:w-fit lg:justify-start">
           {Speakers.map((speaker, index) => {
@@ -195,18 +299,37 @@ function Speaker(props: bodyScrollProps) {
         </div>
       </section>
       <img src={greencoins} alt="" className="lg:hidden" />
-    
-        <div className={overlayClassName}>
-          <SpeakerOverlay
-            firstname={Speakers[cardIndex].firstname}
-            lastname={Speakers[cardIndex].lastname}
-            image={Speakers[cardIndex].image}
-            description={Speakers[cardIndex].description}
-            closeHandler={cardCloseHandler}
-            nextHandler={cardNextHandler}
-            prevHandler={cardPrevHandler}
-          />
+      <div className=" lg:hidden w-3/4 mx-auto border-0">
+          <div className="dark:hidden">
+            <lottie-player
+              ref={container10Ref}
+              id="lottie9"
+              mode="normal"
+              src="https://assets1.lottiefiles.com/packages/lf20_shgbbqut.json"
+            ></lottie-player>
+          </div>
+
+          <div className="hidden dark:block">
+            <lottie-player
+              ref={container11Ref}
+              id="lottie10"
+              mode="normal"
+              src="https://assets5.lottiefiles.com/packages/lf20_3jipweke.json"
+            ></lottie-player>
+            </div>
         </div>
+
+      <div className={overlayClassName}>
+        <SpeakerOverlay
+          firstname={Speakers[cardIndex].firstname}
+          lastname={Speakers[cardIndex].lastname}
+          image={Speakers[cardIndex].image}
+          description={Speakers[cardIndex].description}
+          closeHandler={cardCloseHandler}
+          nextHandler={cardNextHandler}
+          prevHandler={cardPrevHandler}
+        />
+      </div>
     </div>
   );
 }
