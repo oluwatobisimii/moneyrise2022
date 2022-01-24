@@ -9,7 +9,6 @@ function App() {
   
   const changeBodyScroll = ()=>{
     bodyScroll ? setBodyScroll(false) : setBodyScroll(true);
-    console.log('clicked body')
   }
 
   return (

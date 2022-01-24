@@ -64,7 +64,7 @@ function Hero() {
   }, [container2Ref, containerRef,  container3Ref]);
 
   return (
-    <div className="dark:bg-black py-6">
+    <div className="dark:bg-black md:py-6 lg:py-2">
       <section
         className="container mx-auto px-5 pt-9 md:pt-12 lg:flex"
       >
@@ -125,7 +125,7 @@ function Hero() {
           </div>
         </div>
         <div className="lg:w-1/2">
-          <img src={greencoinshero} alt="" ref={container3Ref} className="dark:hidden"/>
+          <img src={greencoinshero} alt="" ref={container3Ref} className="dark:hidden hidden lg:inline"/>
           <div className="dark:hidden">
             <lottie-player
               ref={containerRef}

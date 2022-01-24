@@ -14,7 +14,7 @@ function Footer() {
       <img
         src={footercoin}
         alt=""
-        className="absolute left-1/2 -ml-12 top-0 -mt-44 lg:-mt-28 scale-50 lg:scale-0"
+        className="absolute left-1/2 -ml-12 top-0 -mt-44 lg:-mt-28 scale-50 lg:scale-100"
       />
       <footer className="container mx-auto flex flex-col-reverse md:flex-row md:justify-between md:items-center md:my-9">
         <div className="mt-9 space-y-6 lg:mt-0 lg:space-y-12 md:mt-0">

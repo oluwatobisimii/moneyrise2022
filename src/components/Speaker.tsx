@@ -45,13 +45,15 @@ const Speakers = [
     firstname: "Solafunmi",
     lastname: "Sosanya",
     image: so,
-    description: ``,
+    description: `Solafunmi describes herself as a 24/7 Investor.
+    She's super passionate about simplifying investing for Africans. Having read over 350 books and thousands of articles on Investing and Companies, she's coached thousands to begin their investment journey and truly believes everyone has the potential to be stupendously wealthy.
+    When she is not investing, she works with one of the biggest Tech Companies in the world.`,
   },
   {
     firstname: "Chukwudalu",
     lastname: "Akabogu",
     image: da,
-    description: ``,
+    description: `Chukwudalu Akabogu has more than 7 years experience covering Banking, Consulting, Corporate Finance, Private Equity & Investment Banking. Throughout the course of his career, he has facilitated capital raise exercises and Investments across various industries including Energy, Fintech, Hospitality, Public Sector amongst others. He currently serves as the Vice President in charge of Energy investments at Platform Capital Investment Partners.`,
   },
   {
     firstname: "Chidinma",
@@ -70,7 +72,7 @@ function SpeakerOverlay(props: SpeakersProps) {
         onClick={props.prevHandler}
       />
       <div className="relative flex flex-col h-5/6 lg:flex-row w-full lg:h-5/6 lg:w-5/6">
-        <div className=" lg:w-2/5 w-full h-2/5 overflow-y-hidden lg:h-full rounded-t-lg bg-primary2">
+        <div className=" lg:w-2/5 w-full h-2/5 overflow-y-hidden lg:h-full rounded-t-lg lg:rounded-l-lg bg-primary2">
           <img
             src={props.image}
             alt=""
@@ -137,13 +139,13 @@ function Speaker(props: bodyScrollProps) {
   const [showSpeakerDetails, setShowSpeakerDetails] = useState(false);
   const [cardIndex, setCardIndex] = useState(0);
 
+  const overlayClassName = showSpeakerDetails ? "block" : "hidden"
   
 
   const cardClickHandler = (e: React.MouseEvent<SVGElement>) => {
     const cardIndex = (e.target as Element).parentElement?.parentElement
       ?.dataset.index;
     const selectedIndex: number = Number(cardIndex);
-    console.log(cardIndex);
     setShowSpeakerDetails(true);
     setCardIndex(selectedIndex);
     props.bodyScroll()
@@ -165,7 +167,6 @@ function Speaker(props: bodyScrollProps) {
     if (cardIndex === 0){
       setCardIndex(Speakers.length - 1)
     }else{setCardIndex(cardIndex - 1)}
-    
   };
 
   return (
@@ -177,7 +178,7 @@ function Speaker(props: bodyScrollProps) {
           </p>
           <img src={greencoins} alt="" className="hidden lg:inline" />
         </div>
-        <div className="col-span-4 md:flex md:space-x-5 lg:space-y-0 space-y-7 md:space-y-0 md:flex-wrap md:justify-center md:w-fit lg:justify-start">
+        <div className="col-span-4 md:flex md:space-x-5 lg:space-y-0 space-y-7 lg:space-x-0 lg:gap-x-4 md:space-y-0 md:flex-wrap md:justify-center md:w-fit lg:justify-start">
           {Speakers.map((speaker, index) => {
             return (
               <SpeakerCard
@@ -194,8 +195,8 @@ function Speaker(props: bodyScrollProps) {
         </div>
       </section>
       <img src={greencoins} alt="" className="lg:hidden" />
-      {showSpeakerDetails && (
-        <div className="bg-black">
+    
+        <div className={overlayClassName}>
           <SpeakerOverlay
             firstname={Speakers[cardIndex].firstname}
             lastname={Speakers[cardIndex].lastname}
@@ -206,7 +207,6 @@ function Speaker(props: bodyScrollProps) {
             prevHandler={cardPrevHandler}
           />
         </div>
-      )}
     </div>
   );
 }
