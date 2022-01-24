@@ -48,7 +48,7 @@ function Footer() {
             </a>
           </div>
           <p className="text-allright font-bold">
-            All right reserved 2022 <span>&#169;</span>
+            All right reserved <span>&#169;</span> 2022 
           </p>
         </div>
 
