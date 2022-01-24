@@ -1,16 +1,12 @@
-import React, {useEffect, useRef} from "react";
+import React, { useEffect, useRef } from "react";
 import logo from "../assets/logo.svg";
 import logowhite from "../assets/logowhite.svg";
 import { HiArrowRight } from "react-icons/hi";
 
-
-
 import { create } from "@lottiefiles/lottie-interactivity";
 import "@lottiefiles/lottie-player";
 
-
 function About() {
-
   const container4Ref: any = useRef<HTMLDivElement>(null);
   const container5Ref: any = useRef<HTMLDivElement>(null);
   const container6Ref: any = useRef<HTMLDivElement>(null);
@@ -20,12 +16,10 @@ function About() {
     container4Ref.current.addEventListener(
       "load",
       (e: React.ChangeEvent<HTMLInputElement>) => {
-
-
         // 4. configure the interactivity library
         create({
           mode: "scroll",
-          container: '#aboutContainer',
+          container: "#aboutContainer",
           player: "#thirdLottie",
           actions: [
             {
@@ -63,7 +57,7 @@ function About() {
           player: "#lottie5",
           actions: [
             {
-              visibility: [0.1,0.5],
+              visibility: [0.1, 0.5],
               type: "seek",
               frames: [0, 30],
             },
@@ -80,7 +74,7 @@ function About() {
           player: "#lottie6",
           actions: [
             {
-              visibility: [0.1,0.5],
+              visibility: [0.1, 0.5],
               type: "seek",
               frames: [0, 30],
             },
@@ -93,52 +87,40 @@ function About() {
   }, []);
 
   return (
-    <div
-      className="bg-aboutgrey font-dm-sans p-5 dark:bg-darker"
-    >
-      <section className="container mx-auto lg:grid lg:grid-cols-6 lg:py-16" id='aboutContainer'>
+    <div className="bg-aboutgrey font-dm-sans p-5 dark:bg-darker">
+      <section
+        className="container mx-auto lg:grid lg:grid-cols-6 lg:py-16"
+        id="aboutContainer"
+      >
         <div className="lg:col-span-2">
           <p
             className="text-center font-tomato font-semibold text-4xl 
             lg:text-6xl my-8 mt-8 dark:text-darktextHD lg:text-left p-4
-            lg:mt-0 lg:mb-0 lg:p-0">
+            lg:mt-0 lg:mb-0 lg:p-0"
+          >
             About the Conference
           </p>
           <div className="hidden lg:inline">
             <div className="dark:hidden">
-            <lottie-player
-              ref={container4Ref}
-              id="thirdLottie"
-              mode="normal"
-              src="https://assets8.lottiefiles.com/packages/lf20_bvya7txw.json"
-            ></lottie-player>
-          </div>
+              <lottie-player
+                ref={container4Ref}
+                id="thirdLottie"
+                mode="normal"
+                src="https://assets8.lottiefiles.com/packages/lf20_bvya7txw.json"
+              ></lottie-player>
+            </div>
 
-          <div className="hidden dark:inline">
-            <lottie-player
-              ref={container5Ref}
-              id="fourthLottie"
-              mode="normal"
-              src="https://assets10.lottiefiles.com/packages/lf20_tniyeuqv.json"
-            ></lottie-player>
+            <div className="hidden dark:inline">
+              <lottie-player
+                ref={container5Ref}
+                id="fourthLottie"
+                mode="normal"
+                src="https://assets10.lottiefiles.com/packages/lf20_tniyeuqv.json"
+              ></lottie-player>
             </div>
           </div>
         </div>
         <div className="col-span-4 md:px-4">
-          <p
-            className="text-xl leading-8 md:text-2xl border-y-2 border-y-stroke grey py-7
-    dark:border-y-darkstroke
-    dark:text-darktext
-    "
-          >
-            Gain practical insights on how to invest from seasoned investors.
-            The Moneyrise conference prioritizes value. Great networking
-            opportunities. It is a melting pot of seasoned professionals,
-            high-level stakeholders in wealth management. Learn about key trends
-            in the wealth management space and what people should start paying
-            attention to in the new year.
-          </p>
-
           <div
             className=" space-y-7 mt-7
           md:flex md:flex-wrap md:space-y-0 md:gap-5
@@ -146,7 +128,8 @@ function About() {
           >
             <div
               className="rounded-md p-6 space-y-4 border-2
-        dark:border-darkstroke dark:text-darktext md:w-2/5 md:items-stretch">
+        dark:border-darkstroke dark:text-darktext md:w-2/5 md:items-stretch"
+            >
               <p className="font-bold text-lg">Answer to your questions</p>
               <p className="text-base">
                 If you have questions about investing well, avoiding scams,
@@ -190,14 +173,44 @@ function About() {
                 <img src={logowhite} alt="" className="hidden dark:inline" />
               </div>
               <a
-            href="https://tix.africa/rise22"
-            target="_blank"
-            rel="noreferrer"
-            className="px-4 py-3 bg-primary2 font-bold text-base text-white inline-block rounded-md hover:bg-btnhover group"
-          >
-            Register Now{" "}
-            <HiArrowRight className="pl-2 inline text-xl font-bold group-hover:animate-btnbounce" />
-          </a>
+                href="https://tix.africa/rise22"
+                target="_blank"
+                rel="noreferrer"
+                className="px-4 py-3 bg-primary2 font-bold text-base text-white inline-block rounded-md hover:bg-btnhover group"
+              >
+                Register Now{" "}
+                <HiArrowRight className="pl-2 inline text-xl font-bold group-hover:animate-btnbounce" />
+              </a>
+            </div>
+          </div>
+
+
+          {/* What are we here for */}
+          <p className="font-bold text-2xl py-6 pt-10">Why you should attend</p>
+
+          <div className="text-xl leading-8 md:text-2xl border-y-2 border-y-stroke grey py-7 dark:border-y-darkstroke dark:text-darktext flex flex-col space-y-5">
+            <div className="flex space-x-4 lg:items-center justify-between">
+              <div className="bg-primary2 border-8 rounded-full w-6 h-6 box-content animate-pulse border-white"></div>
+              <p className="w-10/12">
+                Gain practical insights on how to invest from seasoned
+                investors. The Moneyrise conference prioritizes value.
+              </p>
+            </div>
+
+            <div className="flex space-x-4 lg:items-center justify-between">
+              <div className="bg-primary2 border-8 rounded-full w-6 h-6 box-content animate-pulse border-white"></div>
+              <p className="w-10/12">
+                Great networking opportunities. It is a melting pot of seasoned
+                professionals, high-level stakeholders in wealth management.
+              </p>
+            </div>
+
+            <div className="flex space-x-4 lg:items-center justify-between">
+              <div className="bg-primary2 border-8 rounded-full w-6 h-6 box-content animate-pulse border-white"></div>
+              <p className="w-10/12">
+                Learn about key trends in the wealth management space and what
+                people should start paying attention to in the new year.
+              </p>
             </div>
           </div>
         </div>
@@ -218,7 +231,7 @@ function About() {
               mode="normal"
               src="https://assets10.lottiefiles.com/packages/lf20_tniyeuqv.json"
             ></lottie-player>
-            </div>
+          </div>
         </div>
       </section>
     </div>

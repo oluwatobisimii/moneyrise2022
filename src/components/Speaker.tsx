@@ -72,7 +72,7 @@ const Speakers = [
 function SpeakerOverlay(props: SpeakersProps) {
   return (
     <div className="fixed top-0 bottom-0 left-0 right-0 h-screen w-screen bg-slate-900 bg-opacity-80  font-dm-sans z-10">
-      <div className="mx-auto container top-0 bottom-0 left-0 flex justify-center lg:justify-between items-center px-12 h-full">
+      <div className="mx-auto container top-0 bottom-0 left-0 flex justify-center lg:justify-between items-center px-6 md:px-12 h-full">
         <HiChevronLeft
           className="hover:cursor box-content rounded-full bg-darktextHD dark:bg-profile p-3 text-xl dark:text-white hidden lg:inline-block"
           onClick={props.prevHandler}
@@ -85,7 +85,7 @@ function SpeakerOverlay(props: SpeakersProps) {
               className="object-cover object-center lg:object-top bg-primary2 lg:h-full md:w-2/3 lg:pt-5 lg:w-full mx-auto"
             />
           </div>
-          <div className="bg-white dark:bg-black p-14 dark:text-darktext h-3/5 space-y-8 lg:w-3/5 lg:h-full overflow-y-auto rounded-b-lg lg:rounded-r-lg lg:rounded-bl-none">
+          <div className="bg-white dark:bg-black p-8 md:p-14 dark:text-darktext h-3/5 space-y-8 lg:w-3/5 lg:h-full overflow-y-auto rounded-b-lg lg:rounded-r-lg lg:rounded-bl-none">
             <div>
               <p className="font-bold font-dm-sans text-xl lg:text-3xl dark:text-darktext justify-self-center">
                 {props.firstname}{" "}
@@ -94,7 +94,7 @@ function SpeakerOverlay(props: SpeakersProps) {
               <p className="dark:text-speakercardtext">Speaker</p>
             </div>
 
-            <div>
+            <div >
               <p className="dark:text-darktext whitespace-pre-line lg:text-18 leading-relaxed select-none">
                 {props.description}
               </p>
