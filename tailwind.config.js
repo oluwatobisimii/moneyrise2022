@@ -38,6 +38,23 @@ module.exports = {
 
       boxShadow: {
         'speaker': '0px 10px 60px rgba(0, 0, 0, 0.07)',
+      },
+
+      keyframes: {
+        btnbounce: {
+          '0%, 100%': {
+            transform: 'translateX(-25%)',
+            'animation-timing-function': 'cubic-bezier(0.8, 0, 1, 1)'
+          },
+          '50%': {
+            transform: 'translateX(0)',
+            'animation-timing-function': 'cubic-bezier(0, 0, 0.2, 1)'
+          }
+        }
+      },
+
+      animation: {
+        'btnbounce': 'btnbounce 1s infinite',
       }
     },
   },
