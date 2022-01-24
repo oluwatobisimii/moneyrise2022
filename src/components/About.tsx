@@ -186,27 +186,27 @@ function About() {
 
 
           {/* What are we here for */}
-          <p className="font-bold text-2xl py-6 pt-10">Why you should attend</p>
+          <p className="font-bold text-2xl py-6 pt-10 dark:text-darktext">Why you should attend</p>
 
-          <div className="text-xl leading-8 md:text-2xl border-y-2 border-y-stroke grey py-7 dark:border-y-darkstroke dark:text-darktext flex flex-col space-y-5">
-            <div className="flex space-x-4 lg:items-center justify-between">
-              <div className="bg-primary2 border-8 rounded-full w-6 h-6 box-content animate-pulse border-white"></div>
+          <div className="text-xl leading-8 md:text-2xl border-y-2 border-y-stroke grey py-7 dark:border-y-darkstroke dark:text-darktext flex flex-col space-y-6">
+            <div className="flex space-x-4 md:items-center justify-between">
+              <div className="bg-primary2 border-8 rounded-full w-4 h-4 box-content animate-pulse border-white"></div>
               <p className="w-10/12">
                 Gain practical insights on how to invest from seasoned
                 investors. The Moneyrise conference prioritizes value.
               </p>
             </div>
 
-            <div className="flex space-x-4 lg:items-center justify-between">
-              <div className="bg-primary2 border-8 rounded-full w-6 h-6 box-content animate-pulse border-white"></div>
+            <div className="flex space-x-4 md:items-center justify-between">
+              <div className="bg-primary2 border-8 rounded-full w-4 h-4 box-content animate-pulse border-white"></div>
               <p className="w-10/12">
                 Great networking opportunities. It is a melting pot of seasoned
                 professionals, high-level stakeholders in wealth management.
               </p>
             </div>
 
-            <div className="flex space-x-4 lg:items-center justify-between">
-              <div className="bg-primary2 border-8 rounded-full w-6 h-6 box-content animate-pulse border-white"></div>
+            <div className="flex space-x-4 md:items-center justify-between">
+              <div className="bg-primary2 border-8 rounded-full w-4 h-4 box-content animate-pulse border-white"></div>
               <p className="w-10/12">
                 Learn about key trends in the wealth management space and what
                 people should start paying attention to in the new year.
