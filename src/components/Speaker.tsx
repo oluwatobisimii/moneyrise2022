@@ -74,7 +74,7 @@ function SpeakerOverlay(props: SpeakersProps) {
           <img
             src={props.image}
             alt=""
-            className="object-cover object-center lg:object-top bg-primary2 lg:h-full md:w-2/3 lg:pt-5 mx-auto"
+            className="object-cover object-center lg:object-top bg-primary2 lg:h-full md:w-2/3 lg:pt-5 lg:w-full mx-auto"
           />
         </div>
         <div className="bg-white dark:bg-black p-14 dark:text-darktext h-3/5 space-y-8 lg:w-3/5 lg:h-full overflow-y-auto rounded-b-lg">
