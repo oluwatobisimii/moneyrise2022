@@ -64,7 +64,7 @@ function Hero() {
   }, [container2Ref, containerRef,  container3Ref]);
 
   return (
-    <div className="dark:bg-black">
+    <div className="dark:bg-black py-6">
       <section
         className="container mx-auto px-5 pt-9 md:pt-12 lg:flex"
       >
@@ -97,9 +97,9 @@ function Hero() {
             <p className="font-medium text-18 dark:text-darktextHD">
               Where money meets direction.
             </p>
-            <div className="bg-grey flex space-x-2 text-base items-center shadow-inset  justify-center md:space-x-7 p-4 rounded-lg w-fit 
+            <div className="bg-grey flex space-x-2 text-base items-center shadow-inset justify-center md:space-x-7 p-4 rounded-lg w-fit 
             md:px-8 md:py-6
-            dark:bg-bodycopy dark:text-white mx-auto lg:mx-0 lg:w-fit md:text-lg">
+            dark:bg-bodycopy dark:text-white mx-auto lg:mx-0 lg:w-fit md:text-lg lg:text-base">
               <div className="flex items-center space-x-1 md:space-x-3">
                 <HiCalendar className="text-primary2" />
                 <p>Jan 29</p>

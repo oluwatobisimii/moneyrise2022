@@ -6,19 +6,27 @@ import logowhite from "../assets/logowhite.svg";
 import rise from "../assets/rise.svg";
 import playstore from "../assets/playstore.svg";
 import appstore from "../assets/appstore.svg";
+import footercoin from "../assets/footercoin.svg";
 
 function Footer() {
   return (
-    <div className="bg-black lg:py-14 p-4 py-7">
+    <div className="bg-black lg:py-14 p-4 py-7 relative">
+      <img
+        src={footercoin}
+        alt=""
+        className="absolute left-1/2 -ml-12 top-0 -mt-44 lg:-mt-28 scale-50 lg:scale-0"
+      />
       <footer className="container mx-auto flex flex-col-reverse md:flex-row md:justify-between md:items-center md:my-9">
         <div className="mt-9 space-y-6 lg:mt-0 lg:space-y-12 md:mt-0">
-          <div className="flex space-x-7
-          md:items-center lg:items-start lg:flex-col lg:space-x-0 lg:space-y-6">
+          <div
+            className="flex space-x-7
+          md:items-center lg:items-start lg:flex-col lg:space-x-0 lg:space-y-6"
+          >
             <div className="flex space-x-4">
               <RiInstagramLine className="box-content rounded-full bg-profile p-3 text-xl text-white" />
               <RiTwitterLine className="box-content rounded-full bg-profile p-3 text-xl text-white" />
             </div>
-            <img src={rise} alt="" className="w-1/2"/>
+            <img src={rise} alt="" className="w-1/2" />
           </div>
           <div
             className="flex space-x-4
@@ -47,8 +55,7 @@ function Footer() {
         <div
           className="rounded-md p-6 space-y-4 border-2
         border-darkstroke w-fit
-      text-darktext lg:w-fit lg:items-stretch"
-        >
+      text-darktext lg:w-fit lg:items-stretch">
           <div>
             <img src={logowhite} alt="" />
           </div>

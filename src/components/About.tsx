@@ -30,7 +30,7 @@ function About() {
           player: "#thirdLottie",
           actions: [
             {
-              visibility: [0.1, 0.7],
+              visibility: [0, 0.5],
               type: "seek",
               frames: [0, 30],
             },
@@ -47,7 +47,7 @@ function About() {
           player: "#fourthLottie",
           actions: [
             {
-              visibility: [0.1, 0.7],
+              visibility: [0, 0.5],
               type: "seek",
               frames: [0, 30],
             },
@@ -64,7 +64,7 @@ function About() {
           player: "#lottie5",
           actions: [
             {
-              visibility: [0.7, 1],
+              visibility: [0,0.3],
               type: "seek",
               frames: [0, 30],
             },
@@ -82,7 +82,7 @@ function About() {
           player: "#lottie6",
           actions: [
             {
-              visibility: [0.7, 1],
+              visibility: [0.1,0.3],
               type: "seek",
               frames: [0, 30],
             },
@@ -101,13 +101,9 @@ function About() {
       <section className="container mx-auto lg:grid lg:grid-cols-6 lg:py-16" id='aboutContainer'>
         <div className="lg:col-span-2">
           <p
-            className="text-center font-tomato font-semibold text-4xl
-    lg:text-6xl
-    my-8 mt-8
-        dark:text-darktextHD
-        lg:text-left lg:mt-0
-    "
-          >
+            className="text-center font-tomato font-semibold text-4xl 
+            lg:text-6xl my-8 mt-8 dark:text-darktextHD lg:text-left p-4
+            lg:mt-0 lg:mb-0 lg:p-0">
             About the Conference
           </p>
           <div className="hidden lg:inline">
@@ -130,7 +126,7 @@ function About() {
             </div>
           </div>
         </div>
-        <div className="col-span-4">
+        <div className="col-span-4 md:px-4">
           <p
             className="text-xl leading-8 md:text-2xl border-y-2 border-y-stroke grey py-7
     dark:border-y-darkstroke
@@ -207,7 +203,7 @@ function About() {
             </div>
           </div>
         </div>
-        <div className=" lg:hidden w-3/4 mx-auto -mb-5">
+        <div className=" lg:hidden w-3/4 mx-auto -mb-5 border-0">
           
           <div className="dark:hidden">
             <lottie-player

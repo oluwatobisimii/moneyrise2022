@@ -19,6 +19,11 @@ type SpeakersProps = {
   index?: number;
 };
 
+type bodyScrollProps = {
+  bodyScroll: ()=>void
+}
+
+
 const Speakers = [
   {
     firstname: "Eke",
@@ -58,20 +63,21 @@ const Speakers = [
 
 function SpeakerOverlay(props: SpeakersProps) {
   return (
-    <div className="fixed mx-auto container top-0 bottom-0 left-0 right-0 h-screen  flex justify-center lg:justify-between items-center px-12 font-dm-sans z-10">
+    <div className="fixed top-0 bottom-0 left-0 right-0 h-screen w-screen bg-slate-900 bg-opacity-80  font-dm-sans z-10">
+      <div className="mx-auto container top-0 bottom-0 left-0 flex justify-center lg:justify-between items-center px-12 h-full">
       <HiChevronLeft
         className="hover:cursor box-content rounded-full bg-darktextHD dark:bg-profile p-3 text-xl dark:text-white hidden lg:inline-block"
         onClick={props.prevHandler}
       />
-      <div className="relative flex flex-col lg:flex-row lg:h-5/6 lg:w-5/6">
-        <div className="w-full lg:w-2/5 h-3/6 lg:h-full rounded-lg">
+      <div className="relative flex flex-col h-5/6 lg:flex-row w-full lg:h-5/6 lg:w-5/6">
+        <div className=" lg:w-2/5 w-full h-2/5 overflow-y-hidden lg:h-full rounded-t-lg bg-primary2">
           <img
             src={props.image}
             alt=""
-            className="object-cover object-top lg:object-top bg-primary2 lg:h-full w-full lg:pt-5"
+            className="object-cover object-center lg:object-top bg-primary2 lg:h-full md:w-2/3 lg:pt-5 mx-auto"
           />
         </div>
-        <div className="bg-white dark:bg-black p-14 dark:text-darktext h-3/6 space-y-8 lg:w-3/5 lg:h-full overflow-y-auto">
+        <div className="bg-white dark:bg-black p-14 dark:text-darktext h-3/5 space-y-8 lg:w-3/5 lg:h-full overflow-y-auto rounded-b-lg">
           <div>
             <p className="font-bold font-dm-sans text-xl lg:text-3xl dark:text-darktext justify-self-center">
               {props.firstname}{" "}
@@ -95,6 +101,7 @@ function SpeakerOverlay(props: SpeakersProps) {
         className="hover:cursor box-content rounded-full bg-darktextHD dark:bg-profile p-3 text-xl dark:text-white hidden lg:inline-block"
         onClick={props.nextHandler}
       />
+      </div>
     </div>
   );
 }
@@ -126,9 +133,11 @@ function SpeakerCard(props: SpeakersProps) {
   );
 }
 
-function Speaker() {
+function Speaker(props: bodyScrollProps) {
   const [showSpeakerDetails, setShowSpeakerDetails] = useState(false);
   const [cardIndex, setCardIndex] = useState(0);
+
+  
 
   const cardClickHandler = (e: React.MouseEvent<SVGElement>) => {
     const cardIndex = (e.target as Element).parentElement?.parentElement
@@ -137,10 +146,12 @@ function Speaker() {
     console.log(cardIndex);
     setShowSpeakerDetails(true);
     setCardIndex(selectedIndex);
+    props.bodyScroll()
   };
 
   const cardCloseHandler = (e: React.MouseEvent<SVGElement>) => {
     setShowSpeakerDetails(false);
+    props.bodyScroll()
   };
   const cardNextHandler = (e: React.MouseEvent<SVGElement>) => {
     if (Speakers.length - 1 === cardIndex){

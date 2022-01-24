@@ -6,13 +6,19 @@ import Navbar from "../components/Navbar";
 import Speaker from "../components/Speaker";
 import Venue from "../components/Venue";
 
-function Home() {
+type bodyScrollProps = {
+  bodyscrollprop: ()=>void
+}
+
+
+
+function Home(props: bodyScrollProps) {
   return (
     <>
       <Navbar />
       <Hero />
       <About />
-      <Speaker />
+      <Speaker bodyScroll={props.bodyscrollprop}/>
       <Venue />
       <Footer />
     </>
