@@ -190,14 +190,14 @@ function About() {
                 <img src={logowhite} alt="" className="hidden dark:inline" />
               </div>
               <a
-                href="https://tix.africa/rise22"
-                target="_blank"
-                rel="noreferrer"
-                className="px-4 py-3 bg-primary2 font-bold text-base text-white inline-block rounded-md"
-              >
-                Register Now{" "}
-                <HiArrowRight className="pl-2 inline text-xl font-bold" />
-              </a>
+            href="https://tix.africa/rise22"
+            target="_blank"
+            rel="noreferrer"
+            className="px-4 py-3 bg-primary2 font-bold text-base text-white inline-block rounded-md hover:bg-btnhover group"
+          >
+            Register Now{" "}
+            <HiArrowRight className="pl-2 inline text-xl font-bold group-hover:animate-bounce" />
+          </a>
             </div>
           </div>
         </div>

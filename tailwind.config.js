@@ -23,7 +23,8 @@ module.exports = {
         speaker: '#f8f9f9',
         speakercardtext:'#787878',
         profile: '#696969',
-        allright: '#494949'
+        allright: '#494949',
+        btnhover: '#0898a0',
          },
 
       fontFamily: {

@@ -61,7 +61,11 @@ const Speakers = [
     firstname: "Chidinma",
     lastname: "Okoli",
     image: co,
-    description: ``,
+    description: `Chidinma Okoli is an Investment Professional with experience working in the Venture Capital and Private Equity industry, where she provides pre and post-investment support to early and growth-stage businesses operating in Africa. 
+
+    She is skilled in investment analysis, financial modeling and valuation, due diligence, deal structuring and portfolio management.Outside of her professional career, Chidinma is also the founder of Financially Literate Africa (FLA), a digital financial education company that provides easy-to-understand content on managing personal finances for African youths.
+    
+    She is a recipient of the Diana Award and Nigeria's 25Under25 Prize, in the Finance Category. She is also a Chartered Accountant with a Bachelor’s degree in Finance from the University of Lagos, and a Mini-MBA from the Lagos Business School Venture in Management Program.`,
   },
 ];
 
@@ -91,7 +95,7 @@ function SpeakerOverlay(props: SpeakersProps) {
             </div>
 
             <div>
-              <p className="dark:text-darktext whitespace-pre-line lg:text-18 leading-relaxed">
+              <p className="dark:text-darktext whitespace-pre-line lg:text-18 leading-relaxed select-none">
                 {props.description}
               </p>
             </div>
