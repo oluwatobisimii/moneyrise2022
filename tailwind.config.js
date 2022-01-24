@@ -55,8 +55,11 @@ module.exports = {
 
       animation: {
         'btnbounce': 'btnbounce 1s infinite',
+      },
+      width:{
+       '45%': '45%' 
       }
-    },
+    }
   },
   plugins: [],
 }

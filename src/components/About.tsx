@@ -122,14 +122,8 @@ function About() {
         </div>
         <div className="col-span-4 md:px-4">
           <div
-            className=" space-y-7 mt-7
-          md:flex md:flex-wrap md:space-y-0 md:gap-5
-          "
-          >
-            <div
-              className="rounded-md p-6 space-y-4 border-2
-        dark:border-darkstroke dark:text-darktext md:w-2/5 md:items-stretch"
-            >
+            className=" space-y-7 mt-7 md:flex md:flex-wrap md:space-y-0 md:gap-5">
+            <div className="rounded-md p-6 space-y-4 border-2 dark:border-darkstroke dark:text-darktext md:w-45% md:items-stretch">
               <p className="font-bold text-lg">Answer to your questions</p>
               <p className="text-base">
                 If you have questions about investing well, avoiding scams,
@@ -138,10 +132,7 @@ function About() {
               </p>
             </div>
             <div
-              className="rounded-md p-6 space-y-4 border-2
-        dark:border-darkstroke
-        dark:text-darktext md:w-2/5 md:items-stretch"
-            >
+              className="rounded-md p-6 space-y-4 border-2 dark:border-darkstroke dark:text-darktext md:w-45% md:items-stretch">
               <p className="font-bold text-lg">
                 Invest safely and successfully
               </p>
@@ -154,7 +145,7 @@ function About() {
             <div
               className="rounded-md p-6 space-y-4 border-2
         dark:border-darkstroke
-        dark:text-darktext md:w-2/5 md:items-stretch"
+        dark:text-darktext md:w-45% md:items-stretch"
             >
               <p className="font-bold text-lg">Powered by Risevest</p>
               <p className="text-base">
@@ -166,7 +157,7 @@ function About() {
             <div
               className="rounded-md p-6 space-y-4 border-2
         dark:border-darkstroke
-        dark:text-darktext md:w-2/5 md:items-stretch"
+        dark:text-darktext md:w-45% md:items-stretch"
             >
               <div>
                 <img src={logo} alt="" className=" dark:hidden " />
