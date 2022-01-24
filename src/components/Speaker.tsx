@@ -72,14 +72,14 @@ function SpeakerOverlay(props: SpeakersProps) {
         onClick={props.prevHandler}
       />
       <div className="relative flex flex-col h-5/6 lg:flex-row w-full lg:h-5/6 lg:w-5/6">
-        <div className=" lg:w-2/5 w-full h-2/5 overflow-y-hidden lg:h-full rounded-t-lg lg:rounded-l-lg bg-primary2">
+        <div className=" lg:w-2/5 w-full h-2/5 overflow-y-hidden lg:h-full rounded-t-lg lg:rounded-l-lg lg:rounded-tr-none bg-primary2">
           <img
             src={props.image}
             alt=""
             className="object-cover object-center lg:object-top bg-primary2 lg:h-full md:w-2/3 lg:pt-5 lg:w-full mx-auto"
           />
         </div>
-        <div className="bg-white dark:bg-black p-14 dark:text-darktext h-3/5 space-y-8 lg:w-3/5 lg:h-full overflow-y-auto rounded-b-lg">
+        <div className="bg-white dark:bg-black p-14 dark:text-darktext h-3/5 space-y-8 lg:w-3/5 lg:h-full overflow-y-auto rounded-b-lg lg:rounded-r-lg lg:rounded-bl-none">
           <div>
             <p className="font-bold font-dm-sans text-xl lg:text-3xl dark:text-darktext justify-self-center">
               {props.firstname}{" "}
