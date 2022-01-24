@@ -63,7 +63,7 @@ function About() {
           player: "#lottie5",
           actions: [
             {
-              visibility: [0,0.3],
+              visibility: [0.1,0.5],
               type: "seek",
               frames: [0, 30],
             },
@@ -77,11 +77,10 @@ function About() {
         // 4. configure the interactivity library
         create({
           mode: "scroll",
-          container: '#aboutContainer',
           player: "#lottie6",
           actions: [
             {
-              visibility: [0.1,0.3],
+              visibility: [0.1,0.5],
               type: "seek",
               frames: [0, 30],
             },
@@ -120,7 +119,7 @@ function About() {
               ref={container5Ref}
               id="fourthLottie"
               mode="normal"
-              src="https://assets10.lottiefiles.com/packages/lf20_x25rkvha.json"
+              src="https://assets10.lottiefiles.com/packages/lf20_tniyeuqv.json"
             ></lottie-player>
             </div>
           </div>
@@ -217,7 +216,7 @@ function About() {
               ref={container7Ref}
               id="lottie6"
               mode="normal"
-              src="https://assets10.lottiefiles.com/packages/lf20_x25rkvha.json"
+              src="https://assets10.lottiefiles.com/packages/lf20_tniyeuqv.json"
             ></lottie-player>
             </div>
         </div>

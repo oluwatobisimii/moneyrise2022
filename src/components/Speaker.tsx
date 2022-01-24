@@ -298,8 +298,8 @@ function Speaker(props: bodyScrollProps) {
           })}
         </div>
       </section>
-      <img src={greencoins} alt="" className="lg:hidden" />
-      <div className=" lg:hidden w-3/4 mx-auto border-0">
+      <img src={greencoins} alt="" className="hidden lg:hidden" />
+      <div className=" lg:hidden w-2/5 mx-auto border-0 pb-4">
           <div className="dark:hidden">
             <lottie-player
               ref={container10Ref}
