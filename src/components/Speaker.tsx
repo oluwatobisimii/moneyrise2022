@@ -4,6 +4,9 @@ import ka from "../assets/speakers/KA image.png";
 import so from "../assets/speakers/SO.png";
 import da from "../assets/speakers/DA.png";
 import co from "../assets/speakers/CO.png";
+import Ahmed from "../assets/speakers/Ahmed.png";
+import MartinUche from "../assets/speakers/MartinUche.png";
+import Osinachi from "../assets/speakers/Osinachi.png";
 import greencoins from "../assets/greencoins.svg";
 import { HiChevronRight, HiChevronLeft, HiX } from "react-icons/hi";
 
@@ -66,6 +69,32 @@ const Speakers = [
     She is skilled in investment analysis, financial modeling and valuation, due diligence, deal structuring and portfolio management.Outside of her professional career, Chidinma is also the founder of Financially Literate Africa (FLA), a digital financial education company that provides easy-to-understand content on managing personal finances for African youths.
     
     She is a recipient of the Diana Award and Nigeria's 25Under25 Prize, in the Finance Category. She is also a Chartered Accountant with a Bachelor’s degree in Finance from the University of Lagos, and a Mini-MBA from the Lagos Business School Venture in Management Program.`,
+  },
+  {
+    firstname: "Ahmed",
+    lastname: "Banu",
+    image: Ahmed,
+    description: `Ahmed Olaitan Banu is the Chief Strategist at Parthian Securities Limited. He has general oversight of the business and the responsibility of achieving its objectives.
+
+    With over 14 years of experience in the financial services sector, covering functions in Electronic Banking, Custodial Services, Institutional Trusteeship and Investment Management & Advisory. Prior to joining Parthian, Ahmed was the Head, Equity Investments at Stanbic IBTC Asset Management Limited where he successfully managed various equity-based Mutual Funds and Portfolios with a total asset under the management of around N 30 billion, delivering positive average annual returns to investors while outperforming agreed benchmarks.
+    
+    He is a Charterholder of the Chartered Financial Analyst (CFA) Institute, an Associate Member of the Chartered Institute of Stockbrokers (CIS) and a Certified International Fixed Income and Derivatives (IFID) Dealer.`,
+  },
+  {
+    firstname: "Osinachi",
+    lastname: "Igwe",
+    image: Osinachi,
+    description: `Osinachi grew up in Aba. The 30-year-old who is widely known as Africa’s foremost cryptoartist creates figurative portraits that mirror his personal experiences through a unique visual language which he has perfected over 15 years. 
+    
+    His practice has led conversations around NFTs and how works being produced in the space speak to a larger humanity`,
+  },
+  {
+    firstname: "Martin",
+    lastname: "Uche",
+    image: MartinUche,
+    description: `Martin has a background in Real Estate and Economics and had spent 1-year appraising credit papers at the Bank of Industry, where he gained some experience in investment banking before his move into the Real Estate space. He is currently an Insight Analyst at Estate Intel, where he is responsible for analysing macro-economic and real estate data to generate high-level insights on the real estate market across Sub-Saharan Africa.
+
+    Martin has been involved in bespoke reports engagements to guide the investment decision of local and institutional investors who are actively executing projects in Nigeria. He has done extensive research within the residential real estate asset class in Lagos and Abuja, including the student and young professional housing segment. He is also a member of the Society of Property Researchers (SPR) in London, United Kingdom.`,
   },
 ];
 
